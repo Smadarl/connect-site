@@ -1,0 +1,59 @@
+connections
+ - random list of [0-24] words
+ - pick 3 good for both sides - these are removed from other random draws
+ - pick another 6 good per side
+ - pick 3 bad per side
+
+data structure:
+  game:
+    id
+    words: []
+    turn: playerId
+CREATE TABLE IF NOT EXISTS `connect` (
+	`id` int(10) NOT NULL auto_increment,
+	`words` varchar(255),
+	`turn` int(10),
+	PRIMARY KEY( `id` )
+);
+
+  game_player:
+    game_id
+    player_id
+    mywords {
+        good[],
+        bad[],
+    }
+CREATE TABLE IF NOT EXISTS `connect_player` (
+	`id` int(10) NOT NULL auto_increment,
+	`game_id` int(10),
+	`player_id` int(10),
+	`mywords` varchar(255),
+	PRIMARY KEY( `id` )
+);
+
+  clue:
+    - game
+    - player
+    - word
+    - number
+CREATE TABLE IF NOT EXISTS `clue` (
+	`id` int(10) NOT NULL auto_increment,
+	`connect_player_id` int(10),
+	`word` varchar(255),
+	`number` int(10),
+	PRIMARY KEY( `id` )
+);
+
+  guess
+    - game
+    - player
+    - clue
+    - card_number
+    - result
+CREATE TABLE IF NOT EXISTS `guess` (
+	`id` int(10) NOT NULL auto_increment,
+	`clue_id` int(10),
+	`card_number` int(10),
+	`result` varchar(255),
+	PRIMARY KEY( `id` )
+);

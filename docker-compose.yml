@@ -1,0 +1,42 @@
+version: "3.2"
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - 80:80
+        volumes:
+            - ./app:/app
+            - ./logs:/var/log/app
+            - "./site.conf:/etc/nginx/conf.d/site.conf"
+        links:
+            - php
+
+    php:
+        build: php-fpm
+        volumes:
+            - ./app:/app
+            - ./logs:/var/log/app
+        links:
+            - db
+
+    db:
+        image: mariadb:latest
+        ports:
+            - 3311:3306
+        volumes:
+            - type: volume
+              source: vol_connect
+              target: /var/lib/mysql
+              volume:
+                nocopy: true
+        environment:
+            - MYSQL_ROOT_PASSWORD=ekanerab
+
+volumes:
+    vol_connect:
+
+#volumes:
+#    - new_lword_db:
+#    - logs:./logs
+#    - app:/Users/radams/code/lword
+

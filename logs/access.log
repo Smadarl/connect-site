@@ -1,0 +1,6 @@
+172.20.0.1 - - [24/Jan/2019:01:45:53 +0000] "GET / HTTP/1.1" 200 82271 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+172.20.0.1 - - [24/Jan/2019:01:45:53 +0000] "GET /favicon.ico HTTP/1.1" 200 82242 "http://connect.smada.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+172.21.0.1 - - [24/Jan/2019:02:00:47 +0000] "GET / HTTP/1.1" 200 82263 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+172.21.0.1 - - [24/Jan/2019:02:00:47 +0000] "GET /favicon.ico HTTP/1.1" 200 82234 "http://connect.smada.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+172.21.0.1 - - [02/Feb/2019:00:09:31 +0000] "GET / HTTP/1.1" 200 82263 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
+172.21.0.1 - - [02/Feb/2019:00:09:31 +0000] "GET /favicon.ico HTTP/1.1" 200 82234 "http://connect.smada.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36"
