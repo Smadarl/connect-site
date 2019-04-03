@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `connect_player` (
 	`game_id` int(10),
 	`player_id` int(10),
 	`mywords` varchar(255),
+  `mybad` varchar(255),
 	PRIMARY KEY( `id` )
 );
 
@@ -57,3 +58,19 @@ CREATE TABLE IF NOT EXISTS `guess` (
 	`result` varchar(255),
 	PRIMARY KEY( `id` )
 );
+
+  player
+    - id
+    - session_id
+    - created
+    - last_seen
+CREATE TABLE player (
+`id` INT NOT NULL AUTO_INCREMENT,
+session_id varchar(60) NOT NULL,
+created datetime NOT NULL,
+last_seen datetime NOT NULL,
+   PRIMARY KEY (`id`)
+);
+
+
+Shipwreck,Cold,Flock,Observatory,Implode,Chair,Fix,Kilogram,Coal,Music,Flashlight,Sunburn,Mouse,Happy,Escalator,Oar,Pear,Kite,Mexico,Tennis,Shower,Protestant,Fast,Overture,Nest

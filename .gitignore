@@ -1,0 +1,6 @@
+node_modules
+*.log
+.vscode
+vendor
+logs
+app.js

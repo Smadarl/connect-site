@@ -1,0 +1,22 @@
+{
+  "name": "connect",
+  "version": "1.0.0",
+  "description": "Connect word game, 2 player cooperative",
+  "main": "app/code/index.js",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "mithril": "^2.0.0-rc.4",
+    "popper.js": "^1.14.7",
+    "bootstrap": "^4.3.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+	"start": "webpack app/code/index.js --output app/site/js/app.js -d --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rob Adams",
+  "license": "ISC"
+}

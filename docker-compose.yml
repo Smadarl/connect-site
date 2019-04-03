@@ -10,6 +10,7 @@ services:
             - "./site.conf:/etc/nginx/conf.d/site.conf"
         links:
             - php
+        container_name: conn-web
 
     php:
         build: php-fpm
@@ -18,6 +19,7 @@ services:
             - ./logs:/var/log/app
         links:
             - db
+        container_name: conn-php
 
     db:
         image: mariadb:latest
@@ -31,6 +33,7 @@ services:
                 nocopy: true
         environment:
             - MYSQL_ROOT_PASSWORD=ekanerab
+        container_name: conn-db
 
 volumes:
     vol_connect:

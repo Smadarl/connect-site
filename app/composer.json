@@ -1,0 +1,8 @@
+{
+	"name": "smada/connect",
+	"description": "A simple word game.",
+	"license": "proprietary",
+    "require": {
+        "firebase/php-jwt": "^5.0"
+    }
+}
