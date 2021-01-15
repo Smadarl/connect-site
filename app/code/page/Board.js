@@ -38,36 +38,6 @@ export class Board {
             }));
         }));
     }
-    updateGameState() {
-        m.request({
-            method: 'POST',
-            url: '/index.php',
-            data: { action: 'ajax', method: 'setup' },
-            withCredentials: true
-        })
-        .then((result) => {
-            for (let x = 0; x <= 4; x++) {
-                GameState().wordList[x] = result.board.slice(x * 5, (x * 5) + 5);
-            }
-            GameState().clues = result.clues;
-            GameState().turn = result.turn;
-            GameState().other = result.other;
-            GameState().myId = result.myId;
-            GameState().status = result.state;
-            if (result.turn != result.myId) {
-                this.autoRefresh()
-            }
-        })
-        .catch((err) => {
-
-        })
-    }
-    autoRefresh() {
-        this.timeout = setTimeout(this.updateGameState.bind(this), 60000)
-    }
-    cancelRefresh() {
-        clearTimeout(this.timeout)
-    }
     sendGuess(idx) {
         // TODO: Don't send guesses on previously guessed words
         if (appState.turn == appState.myId && appState.status == 'guess') {

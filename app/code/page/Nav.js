@@ -22,7 +22,7 @@ export class Nav {
             ,m('span', [
                 this.userName(),
                 this.authLink(),
-                ' ' + appState.turn + '* -> ' + appState.other + ': ' + appState.myId + ': ' + appState.status
+                '(' + appState.status + ')'
             ])
         ]);
     }

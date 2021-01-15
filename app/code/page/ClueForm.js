@@ -36,7 +36,7 @@ export class ClueForm {
                 m('input.form-control', {
                     name: 'txtClue',
                     type: 'text',
-                    placeholder: 'Clue'
+                    placeholder: 'Enter Clue Here'
                 }),
                 m('select.form-control', {
                     name: 'numClue',

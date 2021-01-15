@@ -4,3 +4,4 @@ node_modules
 vendor
 logs
 app.js
+.DS_Store

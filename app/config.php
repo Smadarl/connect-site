@@ -7,7 +7,7 @@ $addPath = "$curPath/code";
 ini_set('include_path', "$ip:$addPath");
 
 class Config {
-    const CONFIG_FILE = '/app/config.ini';
+    const CONFIG_FILE = 'config.ini';
 
     static private $data;
     static private $simple;
@@ -29,8 +29,9 @@ class Config {
     }
 
     static public function load() {
-        self::$simple = parse_ini_file(self::CONFIG_FILE, false);
-        self::$data = parse_ini_file(self::CONFIG_FILE, true);
+        $path = __DIR__ . '/' . self::CONFIG_FILE;
+        self::$simple = parse_ini_file($path, false);
+        self::$data = parse_ini_file($path, true);
     }
 }
 

@@ -7,7 +7,7 @@ services:
         volumes:
             - ./app:/app
             - ./logs:/var/log/app
-            - "./site.conf:/etc/nginx/conf.d/site.conf"
+            - "./site.conf:/etc/nginx/conf.d/default.conf"
         links:
             - php
         container_name: conn-web

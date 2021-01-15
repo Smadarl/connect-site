@@ -1,4 +1,3 @@
-import m from "mithril";
 import API from './API';
 
 class AppState {
@@ -13,6 +12,7 @@ class AppState {
         this.myId = 0;
         this.status = 'waiting';
         this.result = 'playing';
+        this.auto_refresh = null;
     }
     curIdx() {
         if (this.turn == this.myId) {
@@ -46,9 +46,18 @@ class AppState {
         });
     }
     autoRefresh() {
-        setTimeout(this.update.bind(this), 30000);
+        if (!this.auto_refresh) {
+            this.auto_refresh = this.setTimeout(this.update.bind(this), 30000);
+        }
+    }
+    cancelRefresh() {
+        if (this.auto_refresh) {
+            clearTimeout(this.auto_refresh);
+            this.auto_refresh = nil;
+        }
     }
     clear() {
+        this.cancelRefresh();
         appState.player = {};
         appState.game = {};
         appState.clues = [];
